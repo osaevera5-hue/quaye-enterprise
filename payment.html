@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment | WoodCraft</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+<span>WOOD</span>CRAFT
+</a>
+
+<nav id="navMenu">
+
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+<a href="cart.html">
+Cart <span id="cartCount">0</span>
+</a>
+
+</nav>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<section class="page-header">
+
+<p>SECURE CHECKOUT</p>
+
+<h1>Make Payment</h1>
+
+<p>
+This is a demonstration payment page.
+</p>
+
+</section>
+
+
+<section class="payment-section">
+
+
+<div class="payment-box">
+
+<h2>Choose Payment Method</h2>
+
+
+<div class="payment-methods">
+
+
+<button
+class="payment-method active"
+onclick="selectPayment('momo', this)"
+>
+
+<span class="payment-icon">📱</span>
+
+<div>
+
+<strong>Mobile Money</strong>
+
+<small>MTN / Telecel / AT</small>
+
+</div>
+
+</button>
+
+
+<button
+class="payment-method"
+onclick="selectPayment('card', this)"
+>
+
+<span class="payment-icon">💳</span>
+
+<div>
+
+<strong>Debit / Credit Card</strong>
+
+<small>Visa / Mastercard</small>
+
+</div>
+
+</button>
+
+
+</div>
+
+
+<!-- MOBILE MONEY -->
+
+<div id="momoPayment" class="payment-form">
+
+<h3>Mobile Money</h3>
+
+<label>Mobile Money Network</label>
+
+<select id="momoNetwork">
+
+<option value="MTN">MTN Mobile Money</option>
+
+<option value="Telecel">
+Telecel Cash
+</option>
+
+<option value="AT">
+AirtelTigo / AT Money
+</option>
+
+</select>
+
+
+<label>Mobile Money Number</label>
+
+<input
+type="tel"
+id="momoNumber"
+placeholder="024 123 4567"
+maxlength="10"
+>
+
+
+<div class="demo-note">
+
+<strong>Demo Mode</strong>
+
+<p>
+This is only a demonstration.
+No money will be deducted.
+</p>
+
+</div>
+
+
+<button
+class="btn pay-button"
+onclick="processPayment()"
+>
+
+Pay Now
+
+</button>
+
+</div>
+
+
+<!-- CARD -->
+
+<div
+id="cardPayment"
+class="payment-form"
+style="display:none;"
+>
+
+<h3>Card Payment</h3>
+
+
+<label>Card Number</label>
+
+<input
+type="text"
+id="cardNumber"
+placeholder="4242 4242 4242 4242"
+maxlength="19"
+>
+
+
+<label>Cardholder Name</label>
+
+<input
+type="text"
+id="cardName"
+placeholder="JOHN DOE"
+>
+
+
+<div class="card-row">
+
+<div>
+
+<label>Expiry</label>
+
+<input
+type="text"
+id="cardExpiry"
+placeholder="MM/YY"
+maxlength="5"
+>
+
+</div>
+
+
+<div>
+
+<label>CVV</label>
+
+<input
+type="password"
+id="cardCVV"
+placeholder="123"
+maxlength="3"
+>
+
+</div>
+
+</div>
+
+
+<div class="demo-note">
+
+<strong>Demo Card</strong>
+
+<p>
+Use 4242 4242 4242 4242 for testing.
+</p>
+
+</div>
+
+
+<button
+class="btn pay-button"
+onclick="processPayment()"
+>
+
+Pay Now
+
+</button>
+
+</div>
+
+
+</div>
+
+
+<!-- ORDER SUMMARY -->
+
+<div class="payment-summary">
+
+<h2>Your Order</h2>
+
+<div id="paymentItems"></div>
+
+<hr>
+
+<div class="summary-row">
+
+<span>Total</span>
+
+<strong id="paymentTotal">
+GH₵ 0
+</strong>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- SUCCESS MODAL -->
+
+<div
+id="successModal"
+class="success-modal"
+>
+
+<div class="success-box">
+
+<div class="success-icon">
+✓
+</div>
+
+<h2>Payment Successful!</h2>
+
+<p>
+Your order has been received successfully.
+</p>
+
+<div class="receipt">
+
+<p>
+<strong>Order Number</strong>
+</p>
+
+<h3 id="orderNumber">
+WC-00000
+</h3>
+
+<p>
+Amount Paid
+</p>
+
+<strong id="successAmount">
+GH₵ 0
+</strong>
+
+</div>
+
+<p class="demo-text">
+This is a demonstration payment.
+No real money was charged.
+</p>
+
+<button
+class="btn"
+onclick="finishPayment()"
+>
+
+Continue Shopping
+
+</button>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<div class="copyright">
+
+© 2026 WoodCraft. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WoodCraft | Handcrafted African Art</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <span>WOOD</span>CRAFT
+    </a>
+
+    <nav id="navMenu">
+
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="cart.html" class="cart-link">
+            Cart <span id="cartCount">0</span>
+        </a>
+
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">HANDCRAFTED IN GHANA</p>
+
+        <h1>
+            Where Wood<br>
+            Becomes <span>Art.</span>
+        </h1>
+
+        <p>
+            Beautiful handmade wood carvings, traditional masks
+            and unique sculptures crafted by an experienced Ghanaian
+            wood carver.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="shop.html" class="btn">
+                Explore Collection
+            </a>
+
+            <a href="about.html" class="btn-outline">
+                Meet The Artist
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <div class="section-title">
+
+        <p>OUR CRAFT</p>
+
+        <h2>Made By Hand.<br>Made With Meaning.</h2>
+
+    </div>
+
+    <div class="intro-text">
+
+        <p>
+            Every piece is carefully carved from wood by hand.
+            Our work celebrates African culture, creativity and
+            traditional craftsmanship.
+        </p>
+
+        <a href="shop.html" class="text-link">
+            View all pieces →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURED PRODUCTS -->
+
+<section class="products-section">
+
+    <div class="section-heading">
+
+        <div>
+            <p>FEATURED WORK</p>
+            <h2>Our Collection</h2>
+        </div>
+
+        <a href="shop.html" class="text-link">
+            View Shop →
+        </a>
+
+    </div>
+
+
+    <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img src="images/image1.jpeg" alt="Traditional Wood Mask">
+
+                <span class="product-tag">
+                    Handmade
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Traditional African Mask</h3>
+
+                <p class="category">
+                    Wood Mask
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>GH₵ 850</strong>
+
+                    <button onclick="addToCart(
+                        'Traditional African Mask',
+                        850,
+                        'images/mask1.jpg'
+                    )">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img src="images/image2.jpeg" alt="Hand Carved Mask">
+
+                <span class="product-tag">
+                    Popular
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Hand Carved Heritage Mask</h3>
+
+                <p class="category">
+                    Wood Mask
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>GH₵ 1,200</strong>
+
+                    <button onclick="addToCart(
+                        'Hand Carved Heritage Mask',
+                        1200,
+                        'images/mask2.jpg'
+                    )">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img src="images/image3.jpeg" alt="African Wood Sculpture">
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>African Wood Sculpture</h3>
+
+                <p class="category">
+                    Sculpture
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>GH₵ 1,500</strong>
+
+                    <button onclick="addToCart(
+                        'African Wood Sculpture',
+                        1500,
+                        'images/sculpture1.jpg'
+                    )">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARTIST -->
+
+<section class="artist-section">
+
+    <div class="artist-image">
+
+        <img src="images/image1.jpeg" alt="Wood Carver">
+
+    </div>
+
+    <div class="artist-content">
+
+        <p>THE ARTIST</p>
+
+        <h2>A Lifetime<br>of Wood Carving.</h2>
+
+        <p>
+            What began as a passion has grown into a lifetime
+            dedicated to transforming ordinary pieces of wood
+            into meaningful works of art.
+        </p>
+
+        <p>
+            Each carving carries a story, inspired by Ghanaian
+            culture, African traditions and the natural beauty
+            of wood.
+        </p>
+
+        <a href="about.html" class="btn">
+            His Story
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <p>LOOKING FOR SOMETHING SPECIAL?</p>
+
+    <h2>
+        Custom Carvings<br>
+        Made For You.
+    </h2>
+
+    <p>
+        Have a design or idea in mind?
+        We also accept custom wood carving orders.
+    </p>
+
+    <a href="contact.html" class="btn">
+        Request a Custom Piece
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div>
+
+            <h2>WOODCRAFT</h2>
+
+            <p>
+                Handcrafted African wood art,
+                made with passion and tradition.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Explore</h3>
+
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>Ghana</p>
+            <p>+233 XX XXX XXXX</p>
+            <p>info@woodcraft.com</p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 WoodCraft. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

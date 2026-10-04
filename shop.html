@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shop | WoodCraft</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+<span>WOOD</span>CRAFT
+</a>
+
+<nav id="navMenu">
+
+<a href="index.html">Home</a>
+<a href="shop.html" class="active">Shop</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+<a href="cart.html" class="cart-link">
+Cart <span id="cartCount">0</span>
+</a>
+
+</nav>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<section class="page-header">
+
+<p>OUR COLLECTION</p>
+
+<h1>Shop Our Work</h1>
+
+<p>
+Discover handmade masks, sculptures and
+unique wood carvings.
+</p>
+
+</section>
+
+
+<section class="shop-section">
+
+
+<div class="shop-tools">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search carvings..."
+onkeyup="searchProducts()"
+>
+
+
+<div class="categories">
+
+<button onclick="filterProducts('all')">
+All
+</button>
+
+<button onclick="filterProducts('mask')">
+Masks
+</button>
+
+<button onclick="filterProducts('sculpture')">
+Sculptures
+</button>
+
+<button onclick="filterProducts('decor')">
+Decor
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product-grid" id="shopProducts">
+
+
+<div class="product-card" data-category="mask" data-name="Traditional African Mask">
+
+<div class="product-image">
+
+<img src="images/image1.jpeg">
+
+</div>
+
+<div class="product-info">
+
+<h3>Traditional African Mask</h3>
+
+<p class="category">Wood Mask</p>
+
+<div class="product-bottom">
+
+<strong>GH₵ 850</strong>
+
+<button onclick="addToCart(
+'Traditional African Mask',
+850,
+'images/mask1.jpg'
+)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product-card" data-category="mask" data-name="Heritage Mask">
+
+<div class="product-image">
+
+<img src="images/image2.jpeg">
+
+</div>
+
+<div class="product-info">
+
+<h3>Heritage Mask</h3>
+
+<p class="category">Wood Mask</p>
+
+<div class="product-bottom">
+
+<strong>GH₵ 1,200</strong>
+
+<button onclick="addToCart(
+'Heritage Mask',
+1200,
+'images/mask2.jpg'
+)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product-card" data-category="sculpture" data-name="African Sculpture">
+
+<div class="product-image">
+
+<img src="images/image3.jpeg">
+
+</div>
+
+<div class="product-info">
+
+<h3>African Sculpture</h3>
+
+<p class="category">Sculpture</p>
+
+<div class="product-bottom">
+
+<strong>GH₵ 1,500</strong>
+
+<button onclick="addToCart(
+'African Sculpture',
+1500,
+'images/sculpture1.jpg'
+)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product-card" data-category="decor" data-name="Decorative Wood Art">
+
+<div class="product-image">
+
+<img src="images/image5.jpeg">
+
+</div>
+
+<div class="product-info">
+
+<h3>Decorative Wood Art</h3>
+
+<p class="category">Decor</p>
+
+<div class="product-bottom">
+
+<strong>GH₵ 950</strong>
+
+<button onclick="addToCart(
+'Decorative Wood Art',
+950,
+'images/sculpture2.jpg'
+)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-main">
+
+<div>
+
+<h2>WOODCRAFT</h2>
+
+<p>
+Handcrafted African wood art,
+made with passion and tradition.
+</p>
+
+</div>
+
+<div>
+
+<h3>Explore</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>Ghana</p>
+<p>+233 XX XXX XXXX</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 WoodCraft. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
